@@ -18,7 +18,8 @@ In this project, we explore image generation techniques using Generative Adversa
 
 ## <ins><b> Related Works </b></ins>
 
-## <ins><b> Dataset and Pre-processing </b></ins>
+## <ins><b> Dataset and Preprocessing </b></ins>
+We used a Kaggle dataset consisting of 4,319 images of landscapes without any metadata. Since the size of the images in the dataset are inconsistent, we need to do some preprocessing to crop and resize the images into specific dimensions. We performed cropping and resizing the dataset into 3 different dimensions: 64 x 64, 128 x 128 and 256 x 256. The dataset is available [here](https://www.kaggle.com/datasets/arnaud58/landscape-pictures).
 
 ## <ins><b> Experiments </b></ins>
 
