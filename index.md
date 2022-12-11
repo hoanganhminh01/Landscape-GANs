@@ -31,6 +31,6 @@ In this project, we explore image generation techniques using Generative Adversa
 
 ### <ins><b> Additional Example: Pre-trained StyleGANv3 </b></ins>
 
-## <ins><b> Conclusion and Future Works </b></ins
+## <ins><b> Conclusion and Future Works </b></ins>
  
 ## <ins><b> References </b></ins>
