@@ -36,8 +36,19 @@ We used a Kaggle dataset consisting of 4,319 images of landscapes without any me
 
 ## <ins><b> Results </b></ins>
 ### <ins><b> Model Performance </b></ins>
+<div align="center">
+<figure>
+
+ <img alt="loss1" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/outputs/loss64.png"> 
+ <img alt="loss2" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/outputs/loss128.png">
+ 
+</figure>
+</div>
 
 ### <ins><b> Model Evaluation </b></ins>
+
+
+### <ins><b> Outputs </b></ins>
 
 ### <ins><b> Output Comparison </b></ins>
 
