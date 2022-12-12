@@ -28,9 +28,9 @@ We found a few GANs that people were already using to generate landscapes ([Land
  <img alt="sample1" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/data_preprocessed_256/preprocessed_256/00000000_(5).jpg"> 
  <img alt="sample2" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/data_preprocessed_256/preprocessed_256/00000023_(7).jpg">
  <img alt="sample3" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/data_preprocessed_256/preprocessed_256/00000038_(3).jpg">
- *256x256 preprocessed images from "Landscape Pictures" by arnaud58*
 </figure>
 </div>
+ *256x256 preprocessed images from "Landscape Pictures" by arnaud58*
 
 ## <ins><b> Methodology </b></ins>
 The Landscape Pictures dataset consisted of 4,319 images of landscapes without any metadata. Since the image sizes in the dataset were inconsistent, we needed to crop and resize the images into specific dimensions. We preprocessed the dataset into 3 different dimensions: 64 x 64, 128 x 128 and 256 x 256.
