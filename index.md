@@ -30,9 +30,15 @@ We found a few GANs that people were already using to generate landscapes (Lands
 </div>
 
 ## <ins><b> Methodology </b></ins>
-The Landscape Pictures dataset consisted of 4,319 images of landscapes without any metadata. Since the image sizes in the dataset were inconsistent, we needed to crop and resize the images into specific dimensions. We preprocessed the dataset into 3 different dimensions: 64 x 64, 128 x 128 and 256 x 256.
+The Landscape Pictures dataset consisted of 4,319 images of landscapes without any metadata. Since the data set images varied in size, we needed to crop and resize the images to consistent dimensions. We wanted our first round of training to be fast, so we wanted to preprocess our first dataset into 64x64 images. With this in mind, we first cropped images to 512x512, which we felt was large enough to still contain a lot of interesting landscape features, but was also a small enough section of the image so that downsampling further to 64x64 wouldn't result in an image that was too blurry. We preprocessed our 128x128 and 256x256 images in the same way, always first cropping to 512x512. You can find our preprocessing code [here](https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/src/preprocessing.py).
 
 We reimplemented Natsu's DCGAN architecture for our initial approach. DCGAN, or Deep Convolutional GAN, consists of 4 transposed convolutional layers. Some additional important features of DCGAN includes the replacement of pooling layers with strided convolutions in the discriminator and fractional-strided convolutions in the generator, the use of batch normalization layers in both the generator and the discriminator, the exclusion of connected hidden layers, and the use of Tanh and Leaky ReLU activation functions. The generator takes in a 100x1 noise vector, and the discriminator takes a 3 x 64 x 64 RGB images as the input. The final output of the network will be a 3 x 64 x 64 RGB image.
+
+After training our 64x64 model, we adapated architecture to handle 128x128 and 256x256 images by adding additional convolutional layers and adjusting sizes and filters. See the links to each model architecture below.
+
+- [DCGAN](https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/src/DCGAN.py - 64x64 images
+- [DCGAN128](https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/src/DCGAN128.py) - 128x128 images
+- [DCGAN256](https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/src/DCGAN256.py) - 256x256 images
 
 <div align="center">
 <figure>
