@@ -70,6 +70,13 @@ Since our experiments do not control for variables (we use different model archi
 
 ### <ins><b> Additional Examples: Pre-trained StyleGANv3 </b></ins>
 
-## <ins><b> Conclusion and Future Works </b></ins>
+## <ins><b> Conclusion and Future Work </b></ins>
+
+[TODO]
+Given more time, we would have liked to explore the following methods:
+- Generating larger HD images (at least 1024x1024). With our current sizes, inaccurate detail is masked by blurriness and low resolution. We want to see if DCGAN models can generate realistic detail in HD resolutions.
+- Generating landscapes with diffusion models
+- Generating landscapes with variational autoencoding
+- Training our own StyleGAN (can take several days)
  
 ## <ins><b> References </b></ins>
