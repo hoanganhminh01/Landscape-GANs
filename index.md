@@ -117,10 +117,10 @@ The animation shows that DCGAN learns important features slower the DCGAN128, be
 
 <div align="center">
  
- <em>Sample of generated 256 x 256 image of StyleGANv3</em>
+ <em>Sample of generated 256 x 256 images of StyleGANv3</em>
  </div>
 
-The animation clearly shows how superios StyleGANv3 is compared to DCGAN in generating realistic outputs. This is expected, since StyleGANv3 were pre-trained on multiple GPUs for several days (average of 72.7s / 1000 images) on a much larger dataset (LHQ dataset), so it is common to generate very good results.
+The animation clearly shows how superior StyleGANv3 is compared to DCGAN in generating realistic outputs. This is expected, since StyleGANv3 were pre-trained on multiple GPUs for several days (average of 72.7s / 1000 images) on a much larger dataset (LHQ dataset), so it is common to generate very good results.
 ## <ins><b> Conclusion and Future Works </b></ins>
 
 During this project, we reimplemented and extended the architecture of DCGAN to work with multiple different sizes of images. We leanred that in order to train larger images, a deeper DCGAN network is needed, and the deeper the network is, the better it is a generating realistic outputs. 
