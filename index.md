@@ -95,21 +95,17 @@ The generated results of DCGAN for 64 x 64 images are still quite blurry, althou
 </figure>
 </div>
 
+The animation shows that DCGAN learns important features slower the DCGAN128, being able to generate images, although still blurry sometimes, containing important edges constructing a proper landscape. 
+
+<div align="center">
 <figure>
  <img alt="result5" src="https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/outputs/stylegan3.gif?raw=true"> 
  
-
  *Sample of generated 256 x 256 image of StyleGANv3*
 </figure>
 </div>
 
-
+The animation clearly shows how superios StyleGANv3 is compared to DCGAN in generating realistic outputs. This is expected, since StyleGANv3 were pre-trained on multiple GPUs for several days (average of 72.7s / 1000 images) on a much larger dataset (LHQ dataset), so it is common to generate very good results.
 ## <ins><b> Conclusion and Future Works </b></ins>
-Through this project, we’ve compared various DCGANs and StyleGANs and showed that models trained on higher resolution images tend to produce better results and take much longer to train. Given more time, we would have like to explore the following techniques:
-- Training DCGAN on larger image sizes (1024x1024)
-- low resolution and blurriness can mask the lack of detail. We want to know whether DCGAN can generate realistic looking images, i.e. if it can generate realistic detail at HD resolutions.
-- Generating landscapes with diffusion models
-- Generating landscapes with autoencoders
-- Training our own StyleGAN - though it would take several days to train, it’s clear that StyleGAN can be very powerful for generating realistic landscapes.
-
+ 
 ## <ins><b> References </b></ins>
