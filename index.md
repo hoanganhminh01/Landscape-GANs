@@ -96,7 +96,7 @@ The generated results of DCGAN for 64 x 64 images are still quite blurry, althou
 </div>
 
 <figure>
- <img alt="result5" src="https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/outputs/stylegan.mp4"> 
+ <img alt="result5" src="https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/outputs/stylegan.gif?raw=true"> 
  
 
  *Fake image evolution of DCGAN models*
