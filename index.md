@@ -75,9 +75,9 @@ Since our experiments do not control for variables (we use different model archi
 </figure>
 </div>
 
-For the original DCGAN model, training 2000 epochs takes about 2.5 hours on CUDA with RTX 3060 GPU (average of 3 - 5 seconds per epoch) and about 8 hours on CPU. For DCGAN128, training 1000 epochs takes about 8 hours on GPU (average of 27 - 30 seconds per epoch). For DCGAN256, we were unable to train our model due to CUDA running out of memory when feeding input through the network. Therefore, we could not generate any plot and result for our DCGAN256 experiment.
+For the original DCGAN model, training 2000 epochs takes about 2.5 hours on CUDA with a RTX 3060 GPU (average of 3 - 5 seconds per epoch) and about 8 hours on a CPU. For DCGAN128, training 1000 epochs takes about 8 hours on GPU (average of 27 - 30 seconds per epoch). For DCGAN256, we were unable to train our model due to CUDA running out of memory when feeding input through the network. Therefore, we could not generate any plots or results for our DCGAN256 experiment.
 
-For the other 2 models, with the same learning rate and batch size, we can look at the plots and see that overall, the losses of DCGAN128 is smaller and less fluctuating that those of DCGAN. The generator's loss of both models both reach approximately 25 in the first 35000 iterations, but way less often in DCGAN128. Similarly, the discriminator's loss of both reach maximum of 15, but less often for DCGAN128.
+For the other 2 models, with the same learning rate and batch size, we can look at the plots and see that overall, the loss of DCGAN128 is smaller and fluctuates less than that of DCGAN, even though DCGAN128 was trained for half as many epochs. The generator's loss in both models reaches approximately 25 in the first 35000 iterations, but way less often in DCGAN128. Similarly, the discriminator's loss in both models reaches maximum of 15, but less often for DCGAN128.
 
 ### <ins><b> Results </b></ins>
 
@@ -91,10 +91,9 @@ For the other 2 models, with the same learning rate and batch size, we can look 
 </figure>
 </div>
 
-Overall, the generated results from the DCGAN128 are more realistic. Several of them look like beach landscapes, with blue-gray skies, beige sandbars and darker brown mountain ranges in-between. It seems the model has gotten quite good at generating these kinds of landscapes, where the different features organized into horizontal layers. If these images were inputs for an image segmentation task, they would likely be fairly easy to predict. We can also observe another archetype of generated images that are covered in green splotches. In particular, the image in row 4 column 2 looks like a waterfall of some sort. It's possible that the green splotches are supposed to be trees and shrubbery of some sort, which would make sense against a waterfall. However, such landscapes are segmented into many more regions than the aforementioned beach landscapes. These would be harder inputs for an image segmentation task, and this could also be why the model has a harder time generating realistic versions. Finally, we also see a few images with orange skies. It's possible that this pattern was learned from sunset samples like row 2 column 6 of "real images".
+Overall, the generated results from the DCGAN128 are more realistic. Several of them look like beach landscapes, with blue-gray skies, beige sandbars and darker brown mountain ranges in-between. It seems the model has gotten quite good at generating these kinds of landscapes, where the different features organized into horizontal layers. If these images were inputs for an image segmentation task, they would likely be fairly easy to predict. We can also observe another archetype of generated images that are covered in green splotches. In particular, the image in row 4 column 2 (DCGAN128 Fake Images) looks like a bit like a waterfall. It's possible that the green splotches are supposed to be trees and shrubbery of some sort, which would make sense next to a waterfall. However, such landscapes are segmented into many more regions than the aforementioned beach landscapes. These would be harder inputs for an image segmentation task, and this could also be why the model has a harder time generating realistic versions. Finally, we also see a few images with orange skies. It's possible that this pattern was learned from sunset samples like row 2 column 6 (DCGAN128 Real Images).
 
-The generated results of DCGAN for 64 x 64 images are still quite blurry, although we are able to partly visualize landscapes, while those from the DCGAN128 are more realistic, but some are still hard to visualize. This explains more why the loss plot of DCGAN is more fluctuating than DCGAN128, even though it was trained for 1000 epochs. Given the details of landscape images, it's harder to learn the important features of the whole landscape when the dimension of the images is too small. Compared to CelebA and MNIST, the datasets that DCGAN was originally trained on, the variance of landscapes are much higher due to the main features are not centered and the fact that there are a lot of factors making up of a landscape. Therefore, by having an additional layer to learn features from larger images, DCGAN128 was able to generated more realistic outputs in less epochs.
-
+Even though we trained our first DCGAN for 2000 epochs, the generated results are still quite blurry when compared to the results of the DCGAN128. This also corresponds with the loss plot for DCGAN having greater flucutations compared to that of DCGAN128. Given the detailed nature of landscape images, it may be harder to learn the important features of the whole landscape when the dimension of the images are too small. Compared to CelebA and MNIST, the datasets that DCGAN was originally trained on, landscape images may also generally have greater variance since A) landscapes can look wildly different from one another, and B) the main features (faces and digits) are not pre-centered. Therefore, by having an additional layer to learn features from larger images, DCGAN128 was able to capture more of this variance and generate more realistic outputs in fewer epochs.
 
 #### <ins><b> Animation: Fake Image Generation </b></ins>
 
@@ -108,7 +107,7 @@ The generated results of DCGAN for 64 x 64 images are still quite blurry, althou
 </figure>
 </div>
 
-The animation shows that DCGAN learns important features slower the DCGAN128, being able to generate images, although still blurry sometimes, containing important edges constructing a proper landscape. 
+The animation shows how the landscapes start to take shape as the models discover important edges. We can observe that DCGAN learns landscape features slower the DCGAN128, although the end results of both models are still blurry to some degree.
 
 <div align="center">
 <figure>
@@ -122,12 +121,13 @@ The animation shows that DCGAN learns important features slower the DCGAN128, be
  <em>Sample of generated 256 x 256 images of StyleGANv3</em>
  </div>
 
-The animation clearly shows how superior StyleGANv3 is compared to DCGAN in generating realistic outputs. This is expected, since StyleGANv3 were pre-trained on multiple GPUs for several days (average of 72.7s / 1000 images) on a much larger dataset (LHQ dataset), so it is common to generate very good results.
+The animation clearly shows how superior StyleGANv3 is compared to DCGAN in generating realistic outputs. This is expected, since StyleGANv3 was pre-trained on multiple GPUs for several days (average of 72.7s / 1000 images) on a much larger dataset (LHQ dataset).
+
 ## <ins><b> Conclusion and Future Works </b></ins>
 
-During this project, we reimplemented and extended the architecture of DCGAN to work with multiple different sizes of images. We leanred that in order to train larger images, a deeper DCGAN network is needed, and the deeper the network is, the better it is a generating realistic outputs. 
+During this project, we reimplemented and extended the architecture of DCGAN to work with multiple image sizes. We observed that in order to train larger images, a deeper DCGAN network is required, and that the deeper the network is, the better it is a generating realistic outputs.
 
-We also noticed that the generated outputs are not very realistic yet and still need improvements, compared to the output we got when testing on a pretrained StyleGANv3. This is due to the limit of time and we were only able to train for a fairly small number of epochs. We were unable to train out model on 256 x 256 images due to computational limitations. Additionally, our dataset is fairly small, so it may not be enough to generate images that can transition smoothly between different landscapes like the output of StyleGANv3, which was trained only a much larger dataset - LHQ. Therefore, if we were to continue our project, with enough computational resources of multiple GPUs and time, we would train our DCGAN models on the full LHQ dataset for a fairly large number of epochs (50000 to 80000 epochs) to see how realistic our output can be.
+We also see that the DCGAN-generated outputs are still not very realistic compared to the outputs from the pre-trained StyleGANv3. Our time constraints meant we were only able to train our DCGANs for a small number of epochs. We were also unable to train our model on 256 x 256 images due to computational limitations. Additionally, we note that our dataset is fairly small, and may not be sufficient for generating images that can transition smoothly between different landscapes like the output of StyleGANv3 (which was trained on a much larger dataset - LHQ). Therefore, if we were to continue our project, with more GPUs and time, we would train our DCGAN models on the full LHQ dataset for a fairly large number of epochs (50000 to 80000) to see how realistic our output can become.
  
 ## <ins><b> References </b></ins>
 [1] Alec Radford, Luke Metz, Soumith Chintala. Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks. ICLR (Poster) 2016.
