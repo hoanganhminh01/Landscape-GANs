@@ -36,7 +36,7 @@ We reimplemented Natsu's DCGAN architecture for our initial approach. DCGAN, or 
 
 After training our 64x64 model, we adapated architecture to handle 128x128 and 256x256 images by adding additional convolutional layers and adjusting sizes and filters. See the links to each model architecture below.
 
-- [DCGAN](https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/src/DCGAN.py - 64x64 images
+- [DCGAN](https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/src/DCGAN.py) - 64x64 images
 - [DCGAN128](https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/src/DCGAN128.py) - 128x128 images
 - [DCGAN256](https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/src/DCGAN256.py) - 256x256 images
 
