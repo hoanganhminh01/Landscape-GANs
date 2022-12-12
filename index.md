@@ -90,7 +90,6 @@ The generated results of DCGAN for 64 x 64 images are still quite blurry, althou
  <img alt="result3" src="https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/outputs/animation64.gif?raw=true"> 
  <img alt="result4" src="https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/outputs/animation128.gif?raw=true">
  
-
  *Fake image evolution of DCGAN models*
 </figure>
 </div>
@@ -107,5 +106,9 @@ The animation shows that DCGAN learns important features slower the DCGAN128, be
 
 The animation clearly shows how superios StyleGANv3 is compared to DCGAN in generating realistic outputs. This is expected, since StyleGANv3 were pre-trained on multiple GPUs for several days (average of 72.7s / 1000 images) on a much larger dataset (LHQ dataset), so it is common to generate very good results.
 ## <ins><b> Conclusion and Future Works </b></ins>
+
+During this project, we reimplemented and extended the architecture of DCGAN to work with multiple different sizes of images. We leanred that in order to train larger images, a deeper DCGAN network is needed, and the deeper the network is, the better it is a generating realistic outputs. 
+
+We also noticed that the generated outputs are not very realistic yet and still need improvements, compared to the output we got when testing on a pretrained StyleGANv3. This is due to the limit of time and we were only able to train for a fairly small number of epochs. We were unable to train out model on 256 x 256 images due to computational limitations. Additionally, our dataset is fairly small, so it may not be enough to generate images that can transition smoothly between different landscapes like the output of StyleGANv3, which was trained only a much larger dataset - LHQ. Therefore, if we were to continue our project, with enough computational resources of multiple GPUs and time, we would train our DCGAN models on the full LHQ dataset for a fairly large number of epochs (50000 to 80000 epochs) to see how realistic our output can be.
  
 ## <ins><b> References </b></ins>
