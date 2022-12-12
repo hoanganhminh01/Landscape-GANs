@@ -40,6 +40,14 @@ We then adapted Natsu's DCGAN architecture to create the following 3 DCGAN's a t
 <div align="center">
 <figure>
 
+* DCGAN trained on 64x64 downsampled Landscape Pictures dataset
+ * 2000 epochs in 2.5 hrs (avg of 4- 5 sec/epoch)
+* DCGAN trained on 128x128 images downsampled Landscape Pictures dataset
+ * 1000 epochs in 8 hrs (avg of 27-30 sec/epoch)
+* DCGAN trained on 256x256 images downsampled Landscape Pictures dataset
+ * Unable to train: CUDA out of Memory error
+* Generated images from pre-trained StyleGAN on LHQ-256 dataset
+ 
  <img alt="model1" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/outputs/dcgan.png"> 
  
 </figure>
