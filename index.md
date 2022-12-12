@@ -18,6 +18,7 @@ In this project, we explore various image generation techniques using Generative
 Landscapes have always been a source of inspiration to anyone fond of hiking and sightseeing. We wanted to see whether deep learning models trained on landscape images can generate novel landscapes that are as realistic as nature. We began by considering a few types of deep learning models including diffusions models and variational autoencoders, but after learning about Generative Adversarial Networks in class, we became interested in the idea of pitting two models against each other, and decided to explore those.
 
 ## <ins><b> Related Works </b></ins>
+Minh had used StyleGANs in the past, and we even found a few GANs that people were already using to generate landscapes (Landscape GAN, GANscapes). Ultimately, we decided we wanted to use a GAN that wasn’t already pre-trained on landscapes, and then find another dataset to train it on. We selected Natsu6767’s Deep Convolutional GAN (originally trained on celebrity faces) and trained it on Landscape Pictures by arnaud58 on Kaggle.
 
 ## <ins><b> Dataset and Preprocessing </b></ins>
 We used a Kaggle dataset consisting of 4,319 images of landscapes without any metadata. Since the size of the images in the dataset are inconsistent, we need to do some preprocessing to crop and resize the images into specific dimensions. We performed cropping and resizing the dataset into 3 different dimensions: 64 x 64, 128 x 128 and 256 x 256. The dataset is available [here](https://www.kaggle.com/datasets/arnaud58/landscape-pictures).
