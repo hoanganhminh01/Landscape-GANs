@@ -128,7 +128,10 @@ During this project, we reimplemented and extended the architecture of DCGAN to 
 We also noticed that the generated outputs are not very realistic yet and still need improvements, compared to the output we got when testing on a pretrained StyleGANv3. This is due to the limit of time and we were only able to train for a fairly small number of epochs. We were unable to train out model on 256 x 256 images due to computational limitations. Additionally, our dataset is fairly small, so it may not be enough to generate images that can transition smoothly between different landscapes like the output of StyleGANv3, which was trained only a much larger dataset - LHQ. Therefore, if we were to continue our project, with enough computational resources of multiple GPUs and time, we would train our DCGAN models on the full LHQ dataset for a fairly large number of epochs (50000 to 80000 epochs) to see how realistic our output can be.
  
 ## <ins><b> References </b></ins>
-[1] Alec Radford, Luke Metz, Soumith Chintala. Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks. ICLR (Poster) 2016
+[1] Alec Radford, Luke Metz, Soumith Chintala. Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks. ICLR (Poster) 2016.
+
 [2] Ali Razavi, Aäron van den Oord, and Oriol Vinyals. 2019. Generating diverse high-fidelity images with VQ-VAE-2. Proceedings of the 33rd International Conference on Neural Information Processing Systems. Curran Associates Inc., Red Hook, NY, USA, Article 1331, 14866–14876.
+
 [3] Mahesh Gorijala and Ambedkar Dukkipati. “Image Generation and Editing with Variational Info Generative AdversarialNetworks.” ArXiv abs/1701.04568 (2017).
-[4] T. Karras, S. Laine and T. Aila, "A Style-Based Generator Architecture for Generative Adversarial Networks" in IEEE Transactions on Pattern Analysis & Machine Intelligence, vol. 43, no. 12, pp. 4217-4228, 2021. doi: 10.1109/TPAMI.2020.2970919
+
+[4] T. Karras, S. Laine and T. Aila, "A Style-Based Generator Architecture for Generative Adversarial Networks" in IEEE Transactions on Pattern Analysis & Machine Intelligence, vol. 43, no. 12, pp. 4217-4228, 2021. doi: 10.1109/TPAMI.2020.2970919.
