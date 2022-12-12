@@ -21,9 +21,9 @@ Landscapes can be beautiful and inspiring - especially for those fond of hiking 
 We found a few GANs that people were already using to generate landscapes (Landscape GAN, GANscapes). Ultimately, we decided we wanted to use a GAN that wasn’t already pre-trained on landscapes. We based our network architecture off of Natsu6767’s Deep Convolutional GAN (originally trained on celebrity faces) and trained it on the [Landscape Pictures](https://www.kaggle.com/datasets/arnaud58/landscape-pictures) dataset by arnaud58 on Kaggle. Minh had used StyleGANs in the past, and we found a [StyleGanv3](https://github.com/justinpinkney/awesome-pretrained-stylegan3) by justinpinkney on github that was trained on LHQ-256 (a 256x256 landscapes dataset).
 <div align="center">
 <figure>
- <img alt="sample1" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/data_preprocessed_256/preprocessed_256/00000000_(5).jpg"> 
- <img alt="sample2" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/data_preprocessed_256/preprocessed_256/00000023_(7).jpg">
- <img alt="sample3" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/data_preprocessed_256/preprocessed_256/00000038_(3).jpg">
+ <img alt="sample1" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/data_preprocessed/preprocessed/00000000_(5).jpg"> 
+ <img alt="sample2" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/data_preprocessed/preprocessed/00000023_(7).jpg">
+ <img alt="sample3" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/data_preprocessed/preprocessed/00000038_(3).jpg">
  
  *Preprocessed images from the "Landscape Pictures" dataset by arnaud58*
 </figure>
