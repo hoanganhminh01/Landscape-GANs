@@ -1,7 +1,7 @@
 <div align="center">
 <figure>
 
- <h1> <b>Landscape Generation using Generative Adversarial Networks </b> </h1>
+ <h1> <b>Landscape Generation using Deep Convolutional Generative Adversarial Networks </b> </h1>
  <h3> Minh Hoang & Kenneth Ma </h3>
  
 </figure>
