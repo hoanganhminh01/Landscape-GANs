@@ -12,9 +12,12 @@
 </div>
 
 ## <ins><b> Abstract </b></ins>
-In this project, we explore image generation techniques using Generative Adversarial Networks (GANs) to generate fake images of landscapes. We use 3 different deep convolutional GANs with different number of epochs to train our networks to generate fake landscape images of different sizes and compare the resulting images and loss. We discuss more of the takeaways of this project in this video summary [INSERT HERE]().
+In this project, we explore various image generation techniques using Generative Adversarial Networks (GANs) to generate fake images of landscapes. We generated images with 3 different GANs and compare the results. We began by training an existing deep convolution GAN architecture on a Landscape image dataset from Kaggle, downsampling the dataset to 64x64 images to reduce overall training time. Then, we built two additional DCGAN networks on top of this one to handle 128x128 and 256x256 images. Unfortunately, we weren't able to train the 256x256 network with our available compute power, so instead, we compared our 64xc64 and 128x128 generated images to images gnereated by a StyleGANv3 that was pre-trained on a different landscape dataset. For an more in-depth overview of our procedure and results, see the following video summary. [INSERT HERE]().
 
-## <ins><b> Introduction </b></ins>
+## <ins><b> Introduction and Problem Statement </b></ins>
+<b>Problem Statement:</b> Landscapes have always been a source of inspiration to anyone fond of hiking and sightseeing. We wanted to see whether deep learning models trained on landscape images can generate novel landscapes that are as realistic as nature.
+
+
 
 ## <ins><b> Related Works </b></ins>
 
