@@ -67,6 +67,7 @@ For the original DCGAN model, training 2000 epochs takes about 2.5 hours on CUDA
 For the other 2 models, with the same learning rate and batch size, we can look at the plots and see that overall, the losses of DCGAN128 is smaller and less fluctuating that those of DCGAN. The generator's loss of both models both reach approximately 25 in the first 35000 iterations, but way less often in DCGAN128. Similarly, the discriminator's loss of both reach maximum of 15, but less often for DCGAN128.
 
 ### <ins><b> Results </b></ins>
+
 #### <ins><b> Comparisons </b></ins>
 <div align="center">
 <figure>
@@ -81,6 +82,7 @@ For the other 2 models, with the same learning rate and batch size, we can look 
 <figure>
  <img alt="result3" src="https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/outputs/animation64.gif?raw=true"> 
  <img alt="result4" src="https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/outputs/animation128.gif?raw=true">
+ 
  
  *Fake image evolution of DCGAN models*
 </figure>
