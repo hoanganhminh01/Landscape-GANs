@@ -34,12 +34,6 @@ The Landscape Pictures dataset consisted of 4,319 images of landscapes without a
 
 We reimplemented Natsu's DCGAN architecture for our initial approach. DCGAN, or Deep Convolutional GAN, consists of 4 transposed convolutional layers. Some additional important features of DCGAN includes the replacement of pooling layers with strided convolutions in the discriminator and fractional-strided convolutions in the generator, the use of batch normalization layers in both the generator and the discriminator, the exclusion of connected hidden layers, and the use of Tanh and Leaky ReLU activation functions. The generator takes in a 100x1 noise vector, and the discriminator takes a 3 x 64 x 64 RGB images as the input. The final output of the network will be a 3 x 64 x 64 RGB image.
 
-After training our 64x64 model, we adapated architecture to handle 128x128 and 256x256 images by adding additional convolutional layers and adjusting sizes and filters. See the links to each model architecture below.
-
-- [DCGAN](https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/src/DCGAN.py) - 64x64 images
-- [DCGAN128](https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/src/DCGAN128.py) - 128x128 images
-- [DCGAN256](https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/src/DCGAN256.py) - 256x256 images
-
 <div align="center">
 <figure>
 
@@ -52,6 +46,10 @@ After training our 64x64 model, we adapated architecture to handle 128x128 and 2
 ## <ins><b> Experiments </b></ins>
 DCGAN originally worked only for 64 x 64 images. Therefore, besides reimplementing and training the original DCGAN on our preprocessed dataset, we extended the model to be able to train on larger images. We built 2 deeper DCGAN models, DCGAN128 and DCGAN256 to take on 128 x 128 and 256 x 256 images. For each image of double size, we added 1 additional transposed convolutional layer of doubled filter size, with batch normalization and activation function, to the generator and discriminator. We also have to adjust the noise input sizes and filter sizes to accommodate the new image sizes. Since DCGAN128 and DCGAN256's architectures are much deeper and consists of much more parameters, we expect the training time to be much longer. DCGAN was originally trained on CelebA with a batch size of 128 and learning rate of 0.0002, and we will also use the same hyperparameters to train our models.
 
+See the links to each model architecture below.
+- [DCGAN](https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/src/DCGAN.py) - 64x64 images
+- [DCGAN128](https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/src/DCGAN128.py) - 128x128 images
+- [DCGAN256](https://github.com/hoanganhminh01/Landscape-Generation-GAN/blob/main/src/DCGAN256.py) - 256x256 images
 
 
 ### <ins><b> Model Evaluation </b></ins>
