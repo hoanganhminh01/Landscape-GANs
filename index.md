@@ -19,19 +19,17 @@ Landscapes have always been a source of inspiration to anyone fond of hiking and
 
 ## <ins><b> Related Works </b></ins>
 We found a few GANs that people were already using to generate landscapes (Landscape GAN, GANscapes). Ultimately, we decided we wanted to use a GAN that wasn’t already pre-trained on landscapes. We based our network architecture off of Natsu6767’s Deep Convolutional GAN (originally trained on celebrity faces) and trained it on the [Landscape Pictures](https://www.kaggle.com/datasets/arnaud58/landscape-pictures) dataset by arnaud58 on Kaggle. Minh had used StyleGANs in the past, and we found a [StyleGanv3](https://github.com/justinpinkney/awesome-pretrained-stylegan3) by justinpinkney on github that was trained on LHQ-256 (a 256x256 landscapes dataset).
-
-## <ins><b> Methodology </b></ins>
-The Landscape Pictures dataset consisted of 4,319 images of landscapes without any metadata. Since the image sizes in the dataset were inconsistent, we needed to crop and resize the images into specific dimensions. We preprocessed the dataset into 3 different dimensions: 64 x 64, 128 x 128 and 256 x 256.
-
 <div align="center">
 <figure>
-
  <img alt="sample1" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/data_preprocessed_256/preprocessed_256/00000000_(5).jpg"> 
  <img alt="sample2" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/data_preprocessed_256/preprocessed_256/00000023_(7).jpg">
  <img alt="sample3" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/data_preprocessed_256/preprocessed_256/00000038_(3).jpg">
- 
+ *64x64 preprocessed images from the "Landscape Pictures" dataset by arnaud58*
 </figure>
 </div>
+
+## <ins><b> Methodology </b></ins>
+The Landscape Pictures dataset consisted of 4,319 images of landscapes without any metadata. Since the image sizes in the dataset were inconsistent, we needed to crop and resize the images into specific dimensions. We preprocessed the dataset into 3 different dimensions: 64 x 64, 128 x 128 and 256 x 256.
 
 We then adapted Natsu's DCGAN architecture to create the following 3 DCGAN's a trained one each on the 3 preprocessed sizes.
 [Insert GAN architectures here]
