@@ -43,6 +43,7 @@ We used a Kaggle dataset consisting of 4,319 images of landscapes without any me
  
 </figure>
 </div>
+
 ## <ins><b> Results </b></ins>
 ### <ins><b> Model Performance </b></ins>
 <div align="center">
