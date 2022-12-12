@@ -39,7 +39,7 @@ We reimplemented Natsu's DCGAN architecture for our initial approach. DCGAN, or 
 
  <img alt="model1" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/outputs/dcgan.png"> 
  
-  *Architecture of DCGAN*
+  *DCGAN Architecture*
 </figure>
 </div>
 
