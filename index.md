@@ -29,7 +29,7 @@ We found a few GANs that people were already using to generate landscapes ([Land
  <img alt="sample2" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/data_preprocessed_256/preprocessed_256/00000023_(7).jpg">
  <img alt="sample3" src="https://raw.githubusercontent.com/hoanganhminh01/Landscape-Generation-GAN/main/data_preprocessed_256/preprocessed_256/00000038_(3).jpg">
 </figure>
-  *256x256 preprocessed images from "Landscape Pictures" by arnaud58*
+ <p>*256x256 preprocessed images from "Landscape Pictures" by arnaud58*</p>
 </div>
 
 ## <ins><b> Methodology </b></ins>
