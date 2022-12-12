@@ -1,14 +1,14 @@
 <div align="center">
 <figure>
 
- <h1> <b>Landscape Generation using Generative Adversarial Networks: A Comparison </b> </h1>
+ <h1> <b>Landscape Generation using Generative Adversarial Networks </b> </h1>
  <h3> Minh Hoang & Kenneth Ma </h3>
  
 </figure>
 </div>
- <em>Published on December 13, 2022</em>
-<div align="right">
  
+<div align="right">
+ <em>Published on December 13, 2022</em>
 </div>
 
 ## <ins><b> Abstract </b></ins>
