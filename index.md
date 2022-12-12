@@ -40,7 +40,7 @@ We use a Kaggle dataset called The Landscape Pictures for our project. The Lands
 
 <div align="center">
  
-  <em>Preprocessed images from the "Landscape Pictures" dataset by arnaud58</em>
+  <em>Preprocessed images from The Landscape Pictures dataset</em>
  </div>
 
 We reimplemented Natsu's DCGAN architecture for our initial approach. DCGAN, or Deep Convolutional GAN, consists of 4 transposed convolutional layers. Some additional important features of DCGAN includes the replacement of pooling layers with strided convolutions in the discriminator and fractional-strided convolutions in the generator, the use of batch normalization layers in both the generator and the discriminator, the exclusion of connected hidden layers, and the use of Tanh and Leaky ReLU activation functions. The generator takes in a 100x1 noise vector, and the discriminator takes a 3 x 64 x 64 RGB images as the input. The final output of the network will be a 3 x 64 x 64 RGB image.
